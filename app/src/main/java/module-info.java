@@ -1,0 +1,2 @@
+module ShiftPlanner.app.main {
+}
