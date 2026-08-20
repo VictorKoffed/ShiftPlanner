@@ -8,16 +8,16 @@ ShiftPlanner är gjord för skiftarbetare och hjälper till att hålla ordning p
 
 ## 📑 Innehåll
 
-* [📁 Projektstruktur](#-projektstruktur)
-* [🧱 Mappstruktur](#-mappstruktur)
-* [🚀 Kom igång](#-kom-igång)
-* [🖼️ Skärmbilder](#️-skärmbilder)
-* [✨ Funktioner](#-funktioner)
-* [🏗️ Arkitektur](#️-arkitektur)
-* [🧠 Avancerade Kotlin/Android-koncept](#-avancerade-kotlinandroid-koncept)
-* [📚 Katalog över viktiga filer](#-katalog-över-viktiga-filer)
-* [📜 License](#-license)
-* [🤖 AI-assistans och kodgenerering](#-ai-assistans-och-kodgenerering)
+* [Projektstruktur](#-projektstruktur)
+* [Mappstruktur](#-mappstruktur)
+* [Kom igång](#-kom-igång)
+* [Skärmbilder](#️-skärmbilder)
+* [Funktioner](#-funktioner)
+* [Arkitektur](#️-arkitektur)
+* [Avancerade Kotlin/Android-koncept](#-avancerade-kotlinandroid-koncept)
+* [Katalog över viktiga filer](#-katalog-över-viktiga-filer)
+* [License](#-license)
+* [AI-assistans och kodgenerering](#-ai-assistans-och-kodgenerering)
 
 ---
 
@@ -107,13 +107,13 @@ Här är några översikter från appens gränssnitt:
 
 | Funktion                      | Beskrivning                                                                                            |
 |:------------------------------|:-------------------------------------------------------------------------------------------------------|
-| **📅 Idag**                   | Visar dagens pass, tider, vilka kollegor som arbetar samt snabbval för att hantera dagen.              |
-| **🗓️ Månadsvy**              | Smidig sidbläddring mellan månader, klickbar års- och månadsväljare samt gråtoning av passerade dagar. |
-| **🔄 Inhopp & passbyten**     | Hantering av övertid och passbyten med spärrar som förhindrar dubbelbokningar.                         |
-| **📱 Hemskärmswidget**        | Genomskinlig och klickbar widget som visar veckoschemat och dagens pass direkt på startskärmen.        |
-| **🔔kvällspåminnelser**       | Skräddarsydda notiser via WorkManager som påminner kvällen innan arbetspass.                           |
-| **🔄 Omstartsskydd**          | `BootReceiver` ser till att larm schemaläggs om efter en omstart av enheten.                           |
-| **🎨 Personlig touch**        | Färgkodade pass och en överskådlig struktur för hela arbetslaget.                                      |
+| **Idag**                   | Visar dagens pass, tider, vilka kollegor som arbetar samt snabbval för att hantera dagen.              |
+| **Månadsvy**              | Smidig sidbläddring mellan månader, klickbar års- och månadsväljare samt gråtoning av passerade dagar. |
+| **Inhopp & passbyten**     | Hantering av övertid och passbyten med spärrar som förhindrar dubbelbokningar.                         |
+| **Hemskärmswidget**        | Genomskinlig och klickbar widget som visar veckoschemat och dagens pass direkt på startskärmen.        |
+| **kvällspåminnelser**       | Skräddarsydda notiser via WorkManager som påminner kvällen innan arbetspass.                           |
+| **Omstartsskydd**          | `BootReceiver` ser till att larm schemaläggs om efter en omstart av enheten.                           |
+| **Personlig touch**        | Färgkodade pass och en överskådlig struktur för hela arbetslaget.                                      |
 
 ---
 
@@ -173,7 +173,7 @@ WidgetDataHelper
 
 ## 📚 Katalog över viktiga filer
 
-### 🗄️ Databas
+### Databas
 
 * `data/db/AppDatabase.kt`
   Singleton-konfiguration för Room-databasen.
@@ -184,7 +184,7 @@ WidgetDataHelper
 * `data/db/OvertimeEntry.kt`
   Entitet för övertid, frånvaro och passbyten.
 
-### 🔔 Larm & notiser
+### Larm & notiser
 
 * `alarm/AlarmHelper.kt`
   Logik för att sätta och avbryta larm.
@@ -195,7 +195,7 @@ WidgetDataHelper
 * `alarm/BootReceiver.kt`
   Lyssnar efter omstart av enheten och bokar om larmen.
 
-### 🎨 UI
+### UI
 
 * `ui/screens/HomeScreen.kt`
   Huvudskärm med dagens pass, veckorad och snabbval.
@@ -243,7 +243,7 @@ Delar av denna kodbas har skapats, refaktorerats eller assisterats med hjälp av
 
 * **Gemini** – används bland annat för strukturering, felsökning, arkitekturråd och kodoptimering.
 
-### 👨‍💻 Mänsklig granskning
+### Mänsklig granskning
 
 All AI-genererad kod har **granskats, testats och validerats manuellt** av utvecklaren.
 
