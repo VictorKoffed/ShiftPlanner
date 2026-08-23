@@ -89,6 +89,10 @@ eller starta appen direkt från Android Studio.
 
 ## 🖼️ Skärmbilder
 
+<div align="center">
+  <video src="https://github.com/user-attachments/assets/6e0548da-7d18-4f0c-bce7-15d08b335a82" autoplay loop muted playsinline width="250"></video>
+</div>
+
 Här är några översikter från appens gränssnitt:
 
 | Startskärm (Idag) | Månadsvy | Hantera Pass |
