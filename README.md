@@ -2,33 +2,33 @@
 
 En schemaapp utvecklad i **Kotlin** med **Jetpack Compose** för Android.
 
-ShiftPlanner är gjord för skiftarbetare och hjälper till att hålla ordning på **rullande scheman, övertid, inhopp, passbyten, kollegors arbetstider och notis påminnelser**.
+ShiftPlanner är tänkt för skiftarbetare och används för att hålla ordning på **rullande scheman, övertid, inhopp, passbyten, kollegors arbetstider och påminnelser**.
 
 ---
 
 ## 📑 Innehåll
 
-* [Projektstruktur](#-projektstruktur)
-* [Mappstruktur](#-mappstruktur)
-* [Kom igång](#-kom-igång)
-* [Skärmbilder](#️-skärmbilder)
-* [Funktioner](#-funktioner)
-* [Arkitektur](#️-arkitektur)
-* [Avancerade Kotlin/Android-koncept](#-avancerade-kotlinandroid-koncept)
-* [Katalog över viktiga filer](#-katalog-över-viktiga-filer)
-* [License](#-license)
-* [AI-assistans och kodgenerering](#-ai-assistans-och-kodgenerering)
+- [Projektstruktur](#-projektstruktur)
+- [Mappstruktur](#-mappstruktur)
+- [Kom igång](#-kom-igång)
+- [Skärmbilder](#️-skärmbilder)
+- [Funktioner](#-funktioner)
+- [Arkitektur](#️-arkitektur)
+- [Kotlin/Android-koncept](#-kotlinandroid-koncept)
+- [Katalog över viktiga filer](#-katalog-över-viktiga-filer)
+- [License](#-license)
+- [AI-assistans och kodgenerering](#-ai-assistans-och-kodgenerering)
 
 ---
 
 ## 📁 Projektstruktur
 
-Projektet är organiserat enligt Android-standarder med **MVVM-arkitektur** och fokus på *Separation of Concerns*.
+Projektet består av en Android-app där UI, ViewModels, databas och bakgrundsfunktioner är uppdelade i separata delar.
 
-| Projektstruktur | Namn                | Beskrivning                                             |
-| :-------------- | :------------------ | :------------------------------------------------------ |
-| `ShiftPlanner`  | Gradle Root         | Projektets huvudnivå.                                   |
-| `app`           | Android Application | Innehåller UI, ViewModels, databaser, widgets och larm. |
+| Projektstruktur | Namn | Beskrivning |
+|:---|:---|:---|
+| `ShiftPlanner` | Gradle Root | Projektets huvudnivå och Gradle-konfiguration. |
+| `app` | Android Application | Innehåller appens UI, ViewModels, databas, widgets och larm. |
 
 ---
 
@@ -55,11 +55,11 @@ app/src/main/java/com/example/shiftplanner/
 
 ### Förutsättningar
 
-* Android Studio
-* Kotlin
-* Gradle
-* Android SDK
-* En Android-enhet eller emulator
+- Android Studio
+- Kotlin
+- Gradle
+- Android SDK
+- En Android-enhet eller emulator
 
 ### Build & Run
 
@@ -75,19 +75,20 @@ git clone <REPOSITORY_URL>
 
 4. Välj en Android-enhet eller emulator.
 
-5. Kör projektet med:
+5. Kör projektet från Android Studio.
+
+Det går även att bygga en debug-version från terminalen:
 
 ```bash
 ./gradlew assembleDebug
 ```
 
-eller starta appen direkt från Android Studio.
-
-> **Obs:** Ersätt `<REPOSITORY_URL>` med den faktiska URL:en till GitHub-repositoriet.
+> **Obs:** Ersätt `<REPOSITORY_URL>` med URL:en till GitHub-repositoriet.
 
 ---
 
 ### 🎬 Demo
+
 <div align="center">
   <video src="https://github.com/user-attachments/assets/6e0548da-7d18-4f0c-bce7-15d08b335a82" autoplay loop muted playsinline width="250"></video>
 </div>
@@ -95,36 +96,38 @@ eller starta appen direkt från Android Studio.
 ---
 
 ## 🖼️ Skärmbilder
-Här är några översikter från appens gränssnitt:
 
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Startskärm (Idag)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Månadsvy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hantera Pass&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
-| :---: | :---: | :---: |
+Några exempel från appens gränssnitt:
+
+| Startskärm (Idag) | Månadsvy | Hantera pass |
+|:---:|:---:|:---:|
 | <img src="Pictures/Home.png" alt="Home Screen" width="250"/> | <img src="Pictures/Month.png" alt="Month View" width="250"/> | <img src="Pictures/AndraPass.png" alt="Change Shift" width="250"/> |
-| *Dagens pass och<br>kollegors tider* | *Smidig månadskalender<br>med Pager* | *Hantera inhopp och<br>passbyten* |
+| *Dagens pass och<br>kollegors tider* | *Månadskalender<br>med Pager* | *Hantera inhopp och<br>passbyten* |
 
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Schemat översikt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Statistik&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hemskärmswidget&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
-| :---: | :---: | :---: |
+| Schemat översikt | Statistik | Hemskärmswidget |
+|:---:|:---:|:---:|
 | <img src="Pictures/ScheduleWork.png" alt="Schedule Work" width="250"/> | <img src="Pictures/Statistics.png" alt="Statistics" width="250"/> | <img src="Pictures/Widget.png" alt="Widget" width="250"/> |
-| *Rullande<br>6-veckorsschema* | *Översikt &<br>sökning* | *Hemskärmswidget<br>(Jetpack Glance)* |
+| *Rullande<br>6-veckorsschema* | *Översikt och<br>sökning* | *Hemskärmswidget<br>(Jetpack Glance)* |
+
 ---
 
 ## ✨ Funktioner
 
-| Funktion                      | Beskrivning                                                                                            |
-|:------------------------------|:-------------------------------------------------------------------------------------------------------|
-| **Idag**                   | Visar dagens pass, tider, vilka kollegor som arbetar samt snabbval för att hantera dagen.              |
-| **Månadsvy**              | Smidig sidbläddring mellan månader, klickbar års- och månadsväljare samt gråtoning av passerade dagar. |
-| **Inhopp & passbyten**     | Hantering av övertid och passbyten med spärrar som förhindrar dubbelbokningar.                         |
-| **Hemskärmswidget**        | Genomskinlig och klickbar widget som visar veckoschemat och dagens pass direkt på startskärmen.        |
-| **kvällspåminnelser**       | Skräddarsydda notiser via WorkManager som påminner kvällen innan arbetspass.                           |
-| **Omstartsskydd**          | `BootReceiver` ser till att larm schemaläggs om efter en omstart av enheten.                           |
-| **Personlig touch**        | Färgkodade pass och en överskådlig struktur för hela arbetslaget.                                      |
+| Funktion | Beskrivning |
+|:---|:---|
+| **Idag** | Visar dagens pass, tider och vilka kollegor som arbetar. |
+| **Månadsvy** | Bläddra mellan månader och välj år eller månad direkt. Passerade dagar visas med gråtoning. |
+| **Inhopp & passbyten** | Hantera övertid och passbyten. Appen kontrollerar bland annat dubbelbokningar. |
+| **Hemskärmswidget** | Visar veckoschemat och dagens pass direkt på Android-startskärmen. |
+| **Kvällspåminnelser** | Skickar en påminnelse kvällen innan ett arbetspass. |
+| **Omstartsskydd** | `BootReceiver` schemalägger om larm efter att telefonen har startats om. |
+| **Färgkodade pass** | Olika färger används för att göra schemat lättare att överblicka. |
 
 ---
 
 ## 🏗️ Arkitektur
 
-ShiftPlanner använder en **MVVM-baserad arkitektur** där UI, state, datalager och bakgrundsarbete hålls separerade.
+ShiftPlanner använder **MVVM** där UI, state, datalager och bakgrundsarbete hålls separerade.
 
 ```mermaid
 graph TD
@@ -162,17 +165,32 @@ Notification
 WidgetDataHelper
 ```
 
+### MVVM
+
+UI:t är byggt med Jetpack Compose och använder ViewModels för att hålla reda på state och hantera logik mellan UI och datalagret.
+
+`StateFlow` används för att skicka uppdateringar från ViewModels till Compose-skärmarna.
+
+### Room
+
+Room används som ett lager ovanpå SQLite-databasen. Databasen innehåller bland annat information om scheman, kollegor, övertid och passbyten.
+
+### Bakgrundsarbete
+
+`AlarmManager`, `BroadcastReceiver` och `WorkManager` används för funktioner som ska fortsätta fungera även när appen inte är öppen.
+
 ---
 
 ## 🧠 Kotlin/Android-koncept
 
-| Område                           | Exempel i koden                          | Förklaring                                                                                                     |
-| :------------------------------- | :--------------------------------------- | :------------------------------------------------------------------------------------------------------------- |
-| **Kotlin Flows & Coroutines**    | `Flow`, `StateFlow`, `collectAsState`    | Reaktivt dataflöde mellan den lokala Room-databasen och UI-lagret.                                             |
-| **Bakgrundstjänster**            | `BroadcastReceiver`, `CoroutineWorker`   | Hanterar enhetsomstarter (`BOOT_COMPLETED`) och schemaläggning av bakgrundsarbete.                             |
-| **Exakta larm**                  | `AlarmManager.setExactAndAllowWhileIdle` | Säkerställer att kvällspåminnelser triggas så exakt som möjligt även när enheten befinner sig i strömsparläge. |
-| **Room Database**                | `@Entity`, `@Dao`, Relations / Joins     | Effektiv lokal lagring av kollegor, grundschema och dynamiska övertidsregler.                                  |
-| **Jetpack Compose & Material 3** | `Card`, `HorizontalPager`, `FilterChip`  | Modern, responsiv UI-design med anpassade komponenter och pastellfärger.                                       |
+| Område | Exempel i koden | Förklaring |
+|:---|:---|:---|
+| **Kotlin Flows & Coroutines** | `Flow`, `StateFlow`, `collectAsState` | Används för att skicka data från databasen till UI:t och hantera asynkrona operationer. |
+| **Bakgrundsarbete** | `BroadcastReceiver`, `CoroutineWorker` | Hanterar bland annat omstarter av enheten och bakgrundsjobb. |
+| **Exakta larm** | `AlarmManager.setExactAndAllowWhileIdle` | Används för kvällspåminnelser även när telefonen är i strömsparläge. |
+| **Room Database** | `@Entity`, `@Dao`, Relations / Joins | Används för lokal lagring av scheman, kollegor och övertid. |
+| **Jetpack Compose** | `Card`, `HorizontalPager`, `FilterChip` | Används för appens gränssnitt och interaktion. |
+| **Jetpack Glance** | App Widget | Används för att visa schemat som en widget på hemskärmen. |
 
 ---
 
@@ -180,33 +198,33 @@ WidgetDataHelper
 
 ### Databas
 
-* `data/db/AppDatabase.kt`
-  Singleton-konfiguration för Room-databasen.
+- `data/db/AppDatabase.kt`  
+  Konfiguration av Room-databasen.
 
-* `data/db/ScheduleDao.kt`
-  SQL-frågor och `Flow`-baserade dataflöden för kollegor och scheman.
+- `data/db/ScheduleDao.kt`  
+  SQL-frågor och `Flow`-baserade dataflöden för scheman och kollegor.
 
-* `data/db/OvertimeEntry.kt`
+- `data/db/OvertimeEntry.kt`  
   Entitet för övertid, frånvaro och passbyten.
 
 ### Larm & notiser
 
-* `alarm/AlarmHelper.kt`
-  Logik för att sätta och avbryta larm.
+- `alarm/AlarmHelper.kt`  
+  Skapar och avbryter larm.
 
-* `alarm/NotificationWorker.kt`
-  WorkManager-jobb som utvärderar morgondagens pass och skickar notiser.
+- `alarm/NotificationWorker.kt`  
+  WorkManager-jobb som kontrollerar morgondagens pass och skickar påminnelser.
 
-* `alarm/BootReceiver.kt`
-  Lyssnar efter omstart av enheten och bokar om larmen.
+- `alarm/BootReceiver.kt`  
+  Körs efter omstart av enheten och schemalägger om larmen.
 
 ### UI
 
-* `ui/screens/HomeScreen.kt`
-  Huvudskärm med dagens pass, veckorad och snabbval.
+- `ui/screens/HomeScreen.kt`  
+  Huvudskärmen med dagens pass, veckorad och snabbval.
 
-* `ui/screens/MonthViewScreen.kt`
-  Interaktiv månadskalender med Pager och administrationsläge.
+- `ui/screens/MonthViewScreen.kt`  
+  Månadskalender med Pager och möjlighet att hantera schemat.
 
 ---
 
@@ -242,17 +260,26 @@ SOFTWARE.
 
 ## 🤖 AI-assistans och kodgenerering
 
-Delar av denna kodbas har skapats, refaktorerats eller assisterats med hjälp av stora språkmodeller (**LLM**) och AI-verktyg för att effektivisera utvecklingsprocessen och förbättra kodkvaliteten.
+AI har använts som stöd under utvecklingen av projektet.
 
 ### Verktyg som använts
 
-* **Gemini** – används bland annat för strukturering, felsökning, arkitekturråd och kodoptimering.
+- **Gemini** – hjälp med struktur, felsökning, kod och dokumentation.
+
+### Hur AI användes
+
+AI användes bland annat för:
+
+- Förslag på implementationer.
+- Felsökning av Kotlin- och Android-kod.
+- Strukturering av vissa delar av projektet.
+- Hjälp med Room, Compose och Android-komponenter.
+- Dokumentation.
 
 ### Mänsklig granskning
 
-All AI-genererad kod har **granskats, testats och validerats manuellt** av utvecklaren.
+Kod som tagits fram med hjälp av AI har granskats och testats manuellt innan den använts i projektet.
 
-AI-verktyg har fungerat som ett stöd i utvecklingsprocessen, medan den slutliga implementationen, arkitekturen och kvalitetssäkringen har hanterats av utvecklaren.
+Den slutliga implementationen och beslut kring projektets struktur och funktionalitet har gjorts av utvecklaren.
 
-```
-```
+---
