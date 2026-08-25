@@ -1,13 +1,47 @@
 # 📅 ShiftPlanner
 
-En schemaapp utvecklad i **Kotlin** med **Jetpack Compose** för Android.
+En Android-app utvecklad i **Kotlin** med **Jetpack Compose** för
+skiftarbetare.
 
-ShiftPlanner är tänkt för skiftarbetare och används för att hålla ordning på **rullande scheman, övertid, inhopp, passbyten, kollegors arbetstider och påminnelser**.
+ShiftPlanner är utvecklad utifrån ett konkret användarbehov och är
+avsedd att hjälpa skiftarbetare att hålla ordning på **rullande
+scheman, övertid, inhopp, passbyten, kollegors arbetstider och
+påminnelser**.
+
+
+---
+
+## 🎯 Projektbakgrund
+
+Detta projekt utvecklades på fritiden efter avslutad utbildning som ett
+eget Android-projekt med ett konkret användningsområde.
+
+Syftet med projektet var att utveckla en praktisk schemaapp för en
+släkting som arbetar skift. Utgångspunkten var ett verkligt behov av att
+kunna hålla ordning på arbetspass, rullande scheman, övertid,
+passbyten och påminnelser i en och samma applikation.
+
+Projektet har framför allt fungerat som ett sätt att fortsätta utveckla
+kunskaper inom Android-utveckling och Kotlin efter avslutad
+utbildning.
+
+Under utvecklingen har jag bland annat fördjupat mig inom:
+
+- Android-utveckling med Kotlin och Jetpack Compose.
+- Lokal datalagring med Room och SQLite.
+- Reaktiv state-hantering med Flow och StateFlow.
+- Bakgrundsarbete med WorkManager och AlarmManager.
+- Android BroadcastReceiver och hantering av enhetsomstarter.
+- Hemskärmswidgets med Jetpack Glance.
+- Notiser och schemalagda påminnelser.
+- Utveckling av en app utifrån ett konkret användarbehov.
+
 
 ---
 
 ## 📑 Innehåll
 
+- [Projektbakgrund](#-projektbakgrund)
 - [Projektstruktur](#-projektstruktur)
 - [Mappstruktur](#-mappstruktur)
 - [Kom igång](#-kom-igång)
@@ -19,16 +53,18 @@ ShiftPlanner är tänkt för skiftarbetare och används för att hålla ordning 
 - [License](#-license)
 - [AI-assistans och kodgenerering](#-ai-assistans-och-kodgenerering)
 
+
 ---
 
 ## 📁 Projektstruktur
 
 Projektet består av en Android-app där UI, ViewModels, databas och bakgrundsfunktioner är uppdelade i separata delar.
 
-| Projektstruktur | Namn | Beskrivning |
+| Del | Typ | Beskrivning |
 |:---|:---|:---|
 | `ShiftPlanner` | Gradle Root | Projektets huvudnivå och Gradle-konfiguration. |
 | `app` | Android Application | Innehåller appens UI, ViewModels, databas, widgets och larm. |
+
 
 ---
 
@@ -146,7 +182,7 @@ Compose UI
     ↓
 ViewModel / StateFlow
     ↓
-Repository / ScheduleCalculator
+ScheduleCalculator / DAO
     ↓
 Room Database
     ↓
