@@ -1,5 +1,10 @@
 # 📅 ShiftPlanner
 
+[![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=flat&logo=kotlin&logoColor=white)](https://kotlinlang.org/)
+[![Android](https://img.shields.io/badge/Android-3DDC84?style=flat&logo=android&logoColor=white)](https://developer.android.com/)
+[![Jetpack Compose](https://img.shields.io/badge/Jetpack%20Compose-4285F4?style=flat&logo=android&logoColor=white)](https://developer.android.com/jetpack/compose)
+[![Room SQLite](https://img.shields.io/badge/Room%20SQLite-003B57?style=flat&logo=sqlite&logoColor=white)](https://developer.android.com/training/data-storage/room)
+
 En Android-app utvecklad i **Kotlin** med **Jetpack Compose** för
 skiftarbetare.
 
